@@ -1,0 +1,13 @@
+. "C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ServiceManagement\Azure\Services\ShortcutStartup.ps1"
+
+Switch-AzureMode -Name AzureResourceManager
+
+#Switch-AzureMode -Name AzureServiceManagement
+
+Add-AzureAccount
+
+Get-AzureSubscription | where {$_.IsCurrent -eq "True"}
+
+#Select-AzureSubscription -SubscriptionId "561e3eb3-9789-4f74-bd38-16934e44d815" 
+
+Select-AzureSubscription -SubscriptionId "88a17470-0d0c-4271-894f-410b681dfeef"
